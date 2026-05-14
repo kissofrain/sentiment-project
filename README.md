@@ -1,6 +1,6 @@
 # sentiment-project
 
-Basic sentiment analysis project built with Copilot assistance.  
+Basic sentiment analysis project.  
 Uses HuggingFace’s DistilBERT model.  
 Runs through CLI, FastAPI, and a Gradio UI.
 
