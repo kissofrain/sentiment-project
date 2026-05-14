@@ -23,9 +23,20 @@ Keeping everything lightweight and local.
 - FastAPI server for programmatic access
 - Gradio UI for interactive testing
 - Logs stored in `flagged/log.csv` (future use)
+---
+## Tech Stack
+- Python  
+- HuggingFace Transformers  
+- DistilBERT  
+- PyTorch (CPU)  
+- FastAPI  
+- Uvicorn  
+- Gradio  
+- Oracle Linux (WSL)
+---
+## Features
 
 ---
-
 ## Installation
 Create a virtual environment and install dependencies:
 
@@ -49,4 +60,5 @@ uvicorn src.api:app --reload
 
 ### CLI Script
 python src/sentiment.py "write something here"
+
 
