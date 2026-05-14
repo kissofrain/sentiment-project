@@ -1,35 +1,52 @@
-# Sentiment Analysis Project
+# sentiment-project
 
-A simple sentiment analysis tool built with HuggingFace Transformers and Python.  
-Runs locally on Oracle Linux (WSL) using a virtual environment.
+Basic sentiment analysis project built with Copilot assistance.  
+Uses HuggingFace’s DistilBERT model.  
+Runs through CLI, FastAPI, and a Gradio UI.
+
+---
+
+## Overview
+Started as a simple sentiment tool. Expanded it into a small ML stack:
+- Transformers pipeline (DistilBERT)
+- FastAPI endpoint
+- Gradio UI for real-time testing
+- CPU-only Torch setup (Oracle Linux WSL)
+
+Keeping everything lightweight and local.
+
+---
 
 ## Features
-- Uses DistilBERT sentiment analysis model
-- Interactive CLI mode (type text and get predictions)
-- Clean project structure
-- Easy to run and extend
-- FastApi endpoint for real-time ML inference
-- Virtual environment isolation (Oracle Linux WSL)
-## How to Run
+- Sentiment analysis using `distilbert-base-uncased-finetuned-sst-2-english`
+- CLI script for quick checks
+- FastAPI server for programmatic access
+- Gradio UI for interactive testing
+- Logs stored in `flagged/log.csv` (future use)
 
-### 1. Activate environment
-source ~/ai-env/bin/activate
+---
 
-### 2. Install dependencies:
-pip install -r requirement.txt
-### 3. Run the script
-python src/sentiment.py
+## Installation
+Create a virtual environment and install dependencies:
 
-### 4. Enter text
-Type any sentence and get a sentiment prediction.
+pip -install torch --index-url https://download.pytorch.org/whl/cpu
 
-### 5. Exit
-Type `quit` to exit.
-Closes CLI tool
-## Tech Stack
-- Python
-- HuggingFace Transformers
-- DistilBERT 
-- Oracle Linux (WSL)
-- FastAPI
-- Uvicorn
+
+---
+
+## Running the Project
+
+### Gradio UI (main entry point)
+
+python src/ui.py
+
+Runs on:
+http://127.0.0.1:7860
+
+
+### FastAPI Server
+uvicorn src.api:app --reload
+
+### CLI Script
+python src/sentiment.py "write something here"
+
