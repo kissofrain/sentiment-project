@@ -1,0 +1,4 @@
+Enter text,Sentiment,flag,username,timestamp
+"John was great, though he had some gnarly nose hairs",POSITIVE (0.9997),,,2026-05-13 21:46:00.750637
+A solid 6/10 experience,POSITIVE (0.9999),,,2026-05-13 21:46:40.588068
+it was aight,NEGATIVE (0.9990),,,2026-05-13 21:47:01.343638
